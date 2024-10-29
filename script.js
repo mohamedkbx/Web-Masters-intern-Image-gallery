@@ -38,3 +38,9 @@ function showSlider() {
 }
 
 //click thumbnail
+thumpnails.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    itemActive = index;
+    showSlider();
+  });
+});
