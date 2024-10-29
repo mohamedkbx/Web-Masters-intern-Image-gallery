@@ -24,6 +24,8 @@ prev.onclick = function () {
   }
   showSlider();
 };
+//auto run slider
+let refreshInterval = setInterval(() => next.click(), 3000);
 
 function showSlider() {
   // remove current itemActive
@@ -42,5 +44,14 @@ thumpnails.forEach((item, index) => {
   item.addEventListener("click", () => {
     itemActive = index;
     showSlider();
+  });
+});
+thumpnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("mouseenter", () => {
+    clearInterval(refreshInterval);
+  });
+
+  thumbnail.addEventListener("mouseleave", () => {
+    refreshInterval = setInterval(() => next.click(), 4000);
   });
 });

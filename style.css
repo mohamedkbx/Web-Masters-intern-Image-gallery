@@ -163,6 +163,9 @@ header .menu {
   transition: 0.5s;
   flex-shrink: 0;
 }
+.thumpnail .item:hover {
+  filter: brightness(0.9);
+}
 .thumpnail .item.active {
   filter: brightness(1);
 }
