@@ -161,6 +161,7 @@ header .menu {
   height: 220px;
   filter: brightness(0.5);
   transition: 0.5s;
+  flex-shrink: 0;
 }
 .thumpnail .item.active {
   filter: brightness(1);
@@ -175,5 +176,16 @@ header .menu {
   position: absolute;
   inset: auto 10px 10px 10px;
   text-shadow: 2px 2px #010101;
+}
+@media screen and (max-width: 678px) {
+  .thumpnail {
+    justify-content: start;
+  }
+  .slider .list .item.active h2 {
+    font-size: 60px;
+  }
+  .arrows {
+    top: 10%;
+  }
 }
 /* thumpnail end */
